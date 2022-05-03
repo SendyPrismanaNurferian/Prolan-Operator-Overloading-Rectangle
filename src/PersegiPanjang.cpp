@@ -11,14 +11,14 @@ void PersegiPanjang::printresult()
   //pengubahan nilai abs di Panjang dan Lebar agar persegi bisa di masukkan ke nilai yang positif dan membuktikan persegi beririsan atau tidak
     pjg = abs (pjg);
     lbr = abs (lbr);
-        cout << "Titik tengah X    : \n" << (this->xmax - this->xmin)/2 + this->xmin;
-        cout << "Titik tengah Y    : \n" << (this->ymax - this->ymin)/2 + this->ymin;
-        cout << "Panjang untuk (X) : \n" << pjg;
-        cout << "Lebar untuk (Y)   : \n" << lbr;
-        cout << "Nilai xmax        : \n" << this->xmax;
-        cout << "Nilai xmin        : \n" << this->xmin;
-        cout << "Nilai ymax        : \n" << this->ymax;
-        cout << "Nilai ymin        : \n" << this->ymin;
+        cout << "\nTitik tengah X    : \n" << (this->xmax - this->xmin)/2 + this->xmin;
+        cout << "\nTitik tengah Y    : \n" << (this->ymax - this->ymin)/2 + this->ymin;
+        cout << "\nPanjang untuk (X) : \n" << pjg;
+        cout << "\nLebar untuk (Y)   : \n" << lbr;
+        cout << "\nNilai xmax        : \n" << this->xmax;
+        cout << "\nNilai xmin        : \n" << this->xmin;
+        cout << "\nNilai ymax        : \n" << this->ymax;
+        cout << "\nNilai ymin        : \n" << this->ymin;
         cout << "\n\n";
 }
 
@@ -53,7 +53,7 @@ PersegiPanjang PersegiPanjang::operator+(PersegiPanjang const &yoi)
         temp.ymax = max(this-> ymax,yoi.ymax);
         temp.ymin = min(this-> ymin,yoi.ymin);
 
-    }else cout << "Persegi Panjang 1 dam 2 Tidak Beririsan";
+    }else cout << "Persegi Panjang 1 dam 2 Tidak Beririsan dan tidak dapat dilakukan pertambahan \n";
 
         return temp;
 }
@@ -72,9 +72,8 @@ PersegiPanjang PersegiPanjang::operator-(PersegiPanjang const &yoi)
         temp.ymax = max(this-> ymax,yoi.ymax);
         temp.ymin = min(this-> ymin,yoi.ymin);
 
-        return temp;
-    }
-    return temp;
+    }else cout << "Persegi Panjang 1 dam 2 Tidak Beririsan dan tidak dapat dilakukan pengurangan \n";
+      return temp;
 }
 
 //Operator (++) berfungsi untuk mengubah luasan persegi panjang dengan mengkali 2x luasan awalnya (diperbesar)
