@@ -1,7 +1,7 @@
 #ifndef __PERSEGIPANJANG_HPP__
 #define __PERSEGIPANJANG_HPP__
 #include <iostream>
-
+ 
 class PersegiPanjang 
 {
     private :
