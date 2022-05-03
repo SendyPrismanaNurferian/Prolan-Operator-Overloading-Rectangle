@@ -9,4 +9,4 @@ PersegiPanjang: $(SOURCES:.cpp=.o)
 	$(CXX) $(CXXFLAGS) -o $@ $^
 
 clean:
-	del src/*.o PersegiPanjang.exe
+	del src/*.o PersegiPanjang.exe 
