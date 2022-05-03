@@ -29,7 +29,6 @@ int main()
     PersegiPanjang pp1(pjg,lbr,Ttengah_x,Ttengah_y);
 
     system("cls||clear");
-    float pjg,lbr,Ttengah_x,Ttengah_y;
     cout << "Masukkan Data yang diperlukan dalam Persegi Panjang ke 2 : \n\n";
     cout << "Panjang Persegi 2 : ";cin >> pjg;
     cout << "Lebar Persegi 2   : ";cin >> lbr;

@@ -59,7 +59,7 @@ PersegiPanjang PersegiPanjang::operator+(PersegiPanjang const &yoi)
 }
 
 //Operator (-) berfungsi untuk mengambil irisan dari dua persegi panjang tadi
-PersegiPanjang PersegiPanjang::operator+(PersegiPanjang const &yoi)
+PersegiPanjang PersegiPanjang::operator-(PersegiPanjang const &yoi)
 {
     PersegiPanjang temp(0,0,0,0);
     
@@ -101,7 +101,7 @@ void PersegiPanjang::operator++()
 }
 
 //Operator (--) berfungsi untuk membuat luasan persegi panjang menjadi 0,5 atau setengah luasan awalnya (diperkecil)
-void PersegiPanjang::operator++()
+void PersegiPanjang::operator--()
 {
     float pjg = 0,lbr = 0,Ttengah_x = 0,Ttengah_y = 0; 
   //Persegi panjang yang diminta dengan memasukkan panjang dan lebar   
