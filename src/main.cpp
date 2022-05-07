@@ -110,7 +110,7 @@ int main()
     else cout << "Kedua Persegi Panjang tidak saling beririsan\n\n";
 
     enter();
-    cout << "Program sudah selesai, Terimakasih";
+    cout << "Program sudah selesai dijalankan, Terimakasih";
     cin.ignore();
     system("cls||clear");
 

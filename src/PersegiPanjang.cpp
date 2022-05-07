@@ -4,6 +4,13 @@
 
 using namespace std;
 
+void enter()
+{
+    cout<<"Harap tekan 'ENTER' untuk start program ini";
+    cin.ignore();
+    system("cls||clear");
+}
+
 void PersegiPanjang::printresult()
 {
     float pjg = this->xmax - this->xmin;
@@ -35,7 +42,7 @@ PersegiPanjang::PersegiPanjang(float Ttengah_x,float Ttengah_y,float pjg,float l
 //Logika untuk mengetahui apakah kedua persegi panjang bersifat beririsan atau tidak 
 bool PersegiPanjang::operator==(PersegiPanjang const &yoi)const
 {
-    if (this->xmax == yoi.xmin && this->xmin < yoi.xmax && this->ymax > yoi.ymin && this->ymin > yoi.ymax)return true;
+    if (this->xmax == yoi.xmin && this->xmin < yoi.xmax && this->ymax > yoi.ymin && this->ymin < yoi.ymax)return true;
     else return false;
 }
 
