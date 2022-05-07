@@ -9,13 +9,6 @@
 
 using namespace std;
 
-void enter()
-{
-    cout<<"Harap tekan 'ENTER' untuk start program ini";
-    cin.ignore();
-    system("cls||clear");
-}
-
 int main()
 {
     system("cls||clear");
@@ -37,7 +30,7 @@ int main()
     cout << "Titik tengah Y    : ";cin>>Ttengah_y;
     PersegiPanjang pp2(pjg,lbr,Ttengah_x,Ttengah_y);
 
-    enter();
+    enter::enter();
     PersegiPanjang pp3;//Persegi Panjang pp1(5,6,7,8) Persegi Panjang pp2(8,7,6,4)
     //Melihat nilai awal yang sudah diinput dari Persegi Panjang 1 dan 2
     cout << "Nilai awal Persegi Panjang 1 : \n";
@@ -45,7 +38,7 @@ int main()
     cout << "Nilai awal Persegi Panjang 2 : \n";
     pp2.printresult();
     
-    enter();
+    enter::enter();
     //Program berjalan ke Operator (+)
     cout << "Nilai awal Persegi Panjang 1 : \n";
     pp1.printresult();
@@ -59,7 +52,7 @@ int main()
      pp3.printresult();
     }    
 
-    enter();
+    enter::enter();
     //Program berjalan ke Operator (-)
     cout << "Nilai awal Persegi Panjang 1 : \n";
     pp1.printresult();
@@ -73,7 +66,7 @@ int main()
      pp3.printresult();
     } 
 
-    enter();
+    enter::enter();
     //Program berjalan ke Operator (++)
     cout << "Persegi Panjang 1 : \n";
     pp1.printresult();
@@ -82,7 +75,7 @@ int main()
     pp1.printresult();
     --pp1;
 
-    enter();
+    enter::enter();
     //Program berjalan ke Operator (--)
     cout << "Persegi Panjang 2 : \n";
     pp2.printresult();
@@ -91,7 +84,7 @@ int main()
     pp2.printresult();
     ++pp2;
 
-    enter();
+    enter::enter();
     //Program berjalan ke Operator [] bergungsi untuk membandingkan nilai xmin dari Persegi Panjang 1 dan 2
     cout << "Membandingkan nilai dari xmin Persegi Panjang 1 dan xmin Persegi Panjang 2 dengan Operator '[]' atau sequal \n";
     cout << "Nilai xmin Persegi Panjang 1 : "<<pp1[1]<< "\nNilai xmin Persegi Panjang 2 : "<<pp2[1];
@@ -99,7 +92,7 @@ int main()
     else if (pp1[1]<pp2[1]) cout << "\n\nNilai xmin Persegi Panjang 1 lebih kecil daripada xmin Persegi Panjang 2\n\n";
     else cout << "\n\nNilai xmin Persegi Panjang 1 dan 2 sama besar nilainya\n\n";
 
-    enter();
+    enter::enter();
     //Program berjalan ke Operator == berfungsi untuk membuktikan bahwa Persegi Panjang 1 dan 2 beririsan
     cout << "Nilai awal Persegi Panjang 1 : \n";
     pp1.printresult();
@@ -109,11 +102,10 @@ int main()
     if (pp1==pp2) cout << "Kedua Persegi Panjang saling beririsan\n\n";
     else cout << "Kedua Persegi Panjang tidak saling beririsan\n\n";
 
-    enter();
+    enter::enter();
     cout << "Program sudah selesai dijalankan, Terimakasih";
     cin.ignore();
     system("cls||clear");
-
 
     return 0;     
 }

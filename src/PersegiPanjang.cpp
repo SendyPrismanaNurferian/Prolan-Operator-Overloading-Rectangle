@@ -4,7 +4,7 @@
 
 using namespace std;
 
-void enter()
+void enter::enter()
 {
     cout<<"Harap tekan 'ENTER' untuk start program ini";
     cin.ignore();
