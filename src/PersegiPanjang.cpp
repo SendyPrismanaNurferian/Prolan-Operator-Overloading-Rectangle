@@ -53,7 +53,7 @@ PersegiPanjang PersegiPanjang::operator+(PersegiPanjang const &yoi)
 {
     PersegiPanjang temp(0,0,0,0);
     
-    if (*this == yoi)//Berfungsi penunjuk nilai dari variable persegi dan syarat yang dipenuhi (terdapat di line command no 26)
+    if (*this == yoi)//Berfungsi penunjuk nilai dari variable persegi dan syarat yang dipenuhi (terdapat di line command no 16)
     {
         // Untuk mengetahui update dari x
         temp.xmin = min(this-> xmin,yoi.xmin);
@@ -71,7 +71,7 @@ PersegiPanjang PersegiPanjang::operator-(PersegiPanjang const &yoi)
 {
     PersegiPanjang temp(0,0,0,0);
     
-    if (*this == yoi)//Berfungsi penunjuk nilai dari variable persegi dan syarat yang dipenuhi (terdapat di line command no 26)
+    if (*this == yoi)//Berfungsi penunjuk nilai dari variable persegi dan syarat yang dipenuhi (terdapat di line command no 16)
     {
         // Untuk mengetahui update dari x
         temp.xmin = min(this-> xmin,yoi.xmin);
