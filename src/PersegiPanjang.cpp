@@ -3,14 +3,6 @@
 #include <cmath>
 using namespace std;
 
-void enter::enter()
-{
-    cout <<"Perhatian!!! Anda boleh menggunakan coding ini dijadikan sebagai referensi, namun tidak boleh keras mencopas atau mengganti tanpa seizin pemilik. By Sendy"<< endl;
-    cout <<"Harap tekan 'ENTER' untuk start dan melanjutkan program ini";
-    cin.ignore();
-    system("cls||clear");
-}
-
 void PersegiPanjang::printresult()
 {
     float pjg = this->xmax - this->xmin;

@@ -2,10 +2,6 @@
 #define __PERSEGIPANJANG_HPP__
 #include <iostream>
 
-namespace enter
-{ 
-    void enter();
-}
 class PersegiPanjang
 {    
     private :      
