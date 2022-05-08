@@ -9,20 +9,20 @@ namespace enter
 class PersegiPanjang
 {    
     private :      
-        float xmin,xmax,ymax,ymin;
+        float xmin,xmax,ymin,ymax;
 
     public :
         PersegiPanjang();
         PersegiPanjang(float Ttengah_x, float Ttengah_y, float pjg, float lbr);
-        PersegiPanjang operator+ (PersegiPanjang const &);
-        PersegiPanjang operator- (PersegiPanjang const &); 
-        void operator ++ ();
-        void operator -- ();
-        void operator -- (int);
-        void operator ++ (int);
+        PersegiPanjang operator+(PersegiPanjang const &);
+        PersegiPanjang operator-(PersegiPanjang const &); 
+        bool operator==(PersegiPanjang const &) const;
         float operator[](int huha);
-        bool operator== (PersegiPanjang const &) const;
-        void printresult ();
+        void operator ++();
+        void operator --();
+        void operator --(int);
+        void operator ++(int);
+        void printresult();
 
 };
 

@@ -1,106 +1,109 @@
 #include "include/PersegiPanjang.hpp"
 #include <iostream>
-
-//TUGAS PEMROGRAMAN LANJUT OPERATOR OVERLOADING PERSEGI PANJANG DI C++
-//Nama       : Sendy Prismana Nurferian
-//Kelas      : A Pemrograman Lanjut
-//NRP        : 5024211012
-//Departemen : Teknik Komputer
-
 using namespace std;
 
 int main()
 {
     system("cls||clear");
-    cout<<"TUGAS OPERATOR OVERLOADING PERSEGI PANJANG by Sendy Prismana Nurferian\n";
-    cout <<"Attention!! Anda boleh menggunakan coding ini dijadikan sebagai referensi, namun tidak boleh keras mencopas atau mengganti tanpa seizin pemilik. By Sendy\n\n";
     float pjg,lbr,Ttengah_x,Ttengah_y;
-    cout << "Masukkan Data yang diperlukan dalam Persegi Panjang ke 1 : \n\n";
-    cout << "Panjang Persegi 1 : ";cin>>pjg;
-    cout << "Lebar Persegi 1   : ";cin>>lbr;
-    cout << "Titik tengah X    : ";cin>>Ttengah_x;
-    cout << "Titik tengah Y    : ";cin>>Ttengah_y;
-    PersegiPanjang pp1(pjg,lbr,Ttengah_x,Ttengah_y);
+    cout << "TUGAS PEMROGRAMAN LANJUT OPERATOR OVERLOADING PERSEGI PANJANG DI C++"<< endl;
+    cout << "Nama   : Sendy Prismana Nurferian"<< endl;
+    cout << "NRP    : 5024211012"<< endl;
+    cout << "Kelas  : (A) Pemrograman Lanjut"<< endl;
+    cout << "Departemen Teknik Komputer"<< endl;
+    cout << "Institut Teknologi Sepuluh Nopember"<< endl;
+    cout << endl
+         << endl;
+    cout << "Masukkan Data yang diperlukan dalam Persegi Panjang ke 1 : "<< endl;
+    cout << "Titik tengah X P1   : ";cin>>Ttengah_x;
+    cout << "Titik tengah Y P1   : ";cin>>Ttengah_y;
+    cout << "Panjang Persegi 1   : ";cin>>pjg;
+    cout << "Lebar Persegi 1     : ";cin>>lbr;
+    PersegiPanjang pp1(Ttengah_x,Ttengah_y,pjg,lbr);
 
-    system("cls||clear");
-    cout << "Masukkan Data yang diperlukan dalam Persegi Panjang ke 2 : \n\n";
-    cout << "Panjang Persegi 2 : ";cin>>pjg;
-    cout << "Lebar Persegi 2   : ";cin>>lbr;
-    cout << "Titik tengah X    : ";cin>>Ttengah_x;
-    cout << "Titik tengah Y    : ";cin>>Ttengah_y;
-    PersegiPanjang pp2(pjg,lbr,Ttengah_x,Ttengah_y);
+    cout << "Masukkan Data yang diperlukan dalam Persegi Panjang ke 2 : "<< endl;
+    cout << "Titik tengah X P2   : ";cin>>Ttengah_x;
+    cout << "Titik tengah Y P2   : ";cin>>Ttengah_y;
+    cout << "Panjang Persegi 2   : ";cin>>pjg;
+    cout << "Lebar Persegi 2     : ";cin>>lbr;
+    PersegiPanjang pp2(Ttengah_x,Ttengah_y,pjg,lbr);
 
     enter::enter();
-    PersegiPanjang pp3;//Persegi Panjang pp1(5,6,7,8) Persegi Panjang pp2(8,7,6,4)
+    PersegiPanjang pp3;//Persegi Panjang pp1(5,6,7,8) Persegi Panjang pp2(8,7,4,4)
     //Melihat nilai awal yang sudah diinput dari Persegi Panjang 1 dan 2
-    cout << "Nilai awal Persegi Panjang 1 : \n";
+    cout << "Nilai awal Persegi Panjang 1 : "<< endl;
     pp1.printresult();
-    cout << "Nilai awal Persegi Panjang 2 : \n";
+    cout << "Nilai awal Persegi Panjang 2 : "<< endl;
     pp2.printresult();
     
     enter::enter();
     //Program berjalan ke Operator (+)
-    cout << "Nilai awal Persegi Panjang 1 : \n";
-    pp1.printresult();
-    cout << "Nilai awal Persegi Panjang 2 : \n";
-    pp2.printresult();
-
     pp3 = pp1 + pp2;
     if (pp1==pp2)
     { 
-    cout << "Nilai Hasil Penjumlahan dari Persegi Panjang 1 dan 2 : \n";
-     pp3.printresult();
+    cout << "Nilai Hasil Penjumlahan dari Persegi Panjang 1 dan 2 : "<< endl;
+    pp3.printresult();
     }    
 
     enter::enter();
     //Program berjalan ke Operator (-)
-    cout << "Nilai awal Persegi Panjang 1 : \n";
-    pp1.printresult();
-    cout << "Nilai awal Persegi Panjang 2 : \n";
-    pp2.printresult();
-
     pp3 = pp1 - pp2;
     if (pp1==pp2)
     { 
-    cout << "Nilai Hasil Pengurangan dari Persegi Panjang 1 dan 2 : \n";
-     pp3.printresult();
+    cout << "Nilai Hasil Pengurangan dari Persegi Panjang 1 dan 2 : "<<endl;
+    pp3.printresult();
     } 
 
     enter::enter();
     //Program berjalan ke Operator (++)
-    cout << "Persegi Panjang 1 : \n";
+    cout << "Nilai awal Persegi Panjang 1 : "<< endl;
     pp1.printresult();
     ++pp1;
-    cout << "Nilai Persegi Panjang 1 setelah dilakukannya Operator (++) : \n";
+    cout << "Nilai Persegi Panjang 1 setelah dilakukannya Operator (++) : "<< endl;
     pp1.printresult();
     --pp1;
+    
+    cout << "Nilai awal Persegi Panjang 2 : "<< endl;
+    pp2.printresult();
+    ++pp2;
+    cout << "Nilai Persegi Panjang 2 setelah dilakukannya Operator (++) : "<< endl;
+    pp2.printresult();
+    --pp2;
 
     enter::enter();
     //Program berjalan ke Operator (--)
-    cout << "Persegi Panjang 2 : \n";
+    cout << "Nilai awal Persegi Panjang 1 : "<< endl;
+    pp1.printresult();
+    --pp1;
+    cout << "Nilai Persegi Panjang 1 setelah dilakukannya Operator (--) : "<< endl;
+    pp1.printresult();
+    ++pp1;
+
+    cout << "Nilai awal Persegi Panjang 2 : "<< endl;
     pp2.printresult();
     --pp2;
-    cout << "Nilai Persegi Panjang 2 setelah dilakukannya Operator (--) : \n";
+    cout << "Nilai Persegi Panjang 2 setelah dilakukannya Operator (--) : "<< endl;
     pp2.printresult();
     ++pp2;
 
     enter::enter();
     //Program berjalan ke Operator [] bergungsi untuk membandingkan nilai xmin dari Persegi Panjang 1 dan 2
-    cout << "Membandingkan nilai dari xmin Persegi Panjang 1 dan xmin Persegi Panjang 2 dengan Operator '[]' atau sequal \n";
-    cout << "Nilai xmin Persegi Panjang 1 : "<<pp1[1]<< "\nNilai xmin Persegi Panjang 2 : "<<pp2[1];
-    if (pp1[1]>pp2[1]) cout << "\n\nNilai xmin Persegi Panjang 1 lebih besar daripada xmin Persegi Panjang 2\n\n";
-    else if (pp1[1]<pp2[1]) cout << "\n\nNilai xmin Persegi Panjang 1 lebih kecil daripada xmin Persegi Panjang 2\n\n";
-    else cout << "\n\nNilai xmin Persegi Panjang 1 dan 2 sama besar nilainya\n\n";
+    cout << "Membandingkan nilai dari xmin Persegi Panjang 1 dan xmin Persegi Panjang 2 dengan Operator '[]' atau sequal"<< endl;
+    cout << "Nilai xmin Persegi Panjang 1 : "<<pp1[1]<< endl;
+    cout << "Nilai xmin Persegi Panjang 2 : "<<pp2[1]<< endl;
+
+    if (pp1[1]>pp2[1]) 
+        cout << "Nilai xmin Persegi Panjang 1 lebih besar daripada xmin Persegi Panjang 2"<< endl;
+    else if (pp1[1]<pp2[1]) 
+        cout << "Nilai xmin Persegi Panjang 1 lebih kecil daripada xmin Persegi Panjang 2"<< endl;
+    else 
+        cout << "Nilai xmin Persegi Panjang 1 dan 2 sama besar nilainya"<< endl;
 
     enter::enter();
     //Program berjalan ke Operator == berfungsi untuk membuktikan bahwa Persegi Panjang 1 dan 2 beririsan
-    cout << "Nilai awal Persegi Panjang 1 : \n";
-    pp1.printresult();
-    cout << "\nNilai awal Persegi Panjang 2 : \n";
-    pp2.printresult();
-
-    if (pp1==pp2) cout << "Kedua Persegi Panjang saling beririsan\n\n";
-    else cout << "Kedua Persegi Panjang tidak saling beririsan\n\n";
+    if (pp1==pp2)
+        cout << "Kedua Persegi Panjang saling beririsan"<< endl;
+    else cout << "Kedua Persegi Panjang tidak saling beririsan"<< endl;
 
     enter::enter();
     cout << "Program sudah selesai dijalankan, Terimakasih";

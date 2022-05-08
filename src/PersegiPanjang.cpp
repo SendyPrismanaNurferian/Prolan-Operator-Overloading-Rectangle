@@ -1,12 +1,12 @@
 #include <iostream>
-#include <cmath>
 #include "include/PersegiPanjang.hpp"
-
+#include <cmath>
 using namespace std;
 
 void enter::enter()
 {
-    cout<<"Harap tekan 'ENTER' untuk start program ini";
+    cout <<"Perhatian!!! Anda boleh menggunakan coding ini dijadikan sebagai referensi, namun tidak boleh keras mencopas atau mengganti tanpa seizin pemilik. By Sendy"<< endl;
+    cout <<"Harap tekan 'ENTER' untuk start dan melanjutkan program ini";
     cin.ignore();
     system("cls||clear");
 }
@@ -18,32 +18,34 @@ void PersegiPanjang::printresult()
   //pengubahan nilai abs di Panjang dan Lebar agar persegi bisa di masukkan ke nilai yang positif dan membuktikan persegi beririsan atau tidak
     pjg = abs (pjg);
     lbr = abs (lbr);
-        cout << "\nTitik tengah X    : \n" << (this->xmax - this->xmin)/2 + this->xmin;
-        cout << "\nTitik tengah Y    : \n" << (this->ymax - this->ymin)/2 + this->ymin;
-        cout << "\nPanjang untuk (X) : \n" << pjg;
-        cout << "\nLebar untuk (Y)   : \n" << lbr;
-        cout << "\nNilai xmax        : \n" << this->xmax;
-        cout << "\nNilai xmin        : \n" << this->xmin;
-        cout << "\nNilai ymax        : \n" << this->ymax;
-        cout << "\nNilai ymin        : \n" << this->ymin;
-        cout << "\n\n";
+        cout << "Titik tengah X    : " << (this->xmax - this->xmin)/2 + this->xmin << endl;
+        cout << "Titik tengah Y    : " << (this->ymax - this->ymin)/2 + this->ymin << endl;
+        cout << "Panjang untuk (X) : " << pjg << endl;
+        cout << "Lebar untuk (Y)   : " << lbr << endl;
+        cout << "Nilai xmin        : " << this->xmin << endl;
+        cout << "Nilai xmax        : " << this->xmax << endl;
+        cout << "Nilai ymin        : " << this->ymin << endl;
+        cout << "Nilai ymax        : " << this->ymax << endl;
+        cout << endl;
 }
 
 PersegiPanjang::PersegiPanjang(){}
-//Cara mencari dan menentukan xmax,xmin dan ymax,ymin 
+//Cara mencari dan menentukan xmin,xmax dan ymin,ymax 
 PersegiPanjang::PersegiPanjang(float Ttengah_x,float Ttengah_y,float pjg,float lbr)
 {
-    this->xmax = Ttengah_x + pjg/2;
-    this->xmin = Ttengah_x - pjg/2;
-    this->ymax = Ttengah_y + lbr/2;
-    this->ymin = Ttengah_y - lbr/2;
+    this->xmin = Ttengah_x - (pjg/2);
+    this->xmax = Ttengah_x + (pjg/2);
+    this->ymin = Ttengah_y - (lbr/2);
+    this->ymax = Ttengah_y + (lbr/2);
 }
 
 //Logika untuk mengetahui apakah kedua persegi panjang bersifat beririsan atau tidak 
 bool PersegiPanjang::operator==(PersegiPanjang const &yoi)const
 {
-    if (this->xmax == yoi.xmin && this->xmin < yoi.xmax && this->ymax > yoi.ymin && this->ymin < yoi.ymax)return true;
-    else return false;
+    if (this->xmax > yoi.xmin && this->xmin < yoi.xmax && this->ymax > yoi.ymin && this->ymin < yoi.ymax)
+    return true;
+    else 
+    return false;
 }
 
 //Operator (+) berfungsi untuk menambah luasan persegi panjang dengan menggabungkan kedua luasan persegi panjang tadi
@@ -54,14 +56,13 @@ PersegiPanjang PersegiPanjang::operator+(PersegiPanjang const &yoi)
     if (*this == yoi)//Berfungsi penunjuk nilai dari variable persegi dan syarat yang dipenuhi (terdapat di line command no 26)
     {
         // Untuk mengetahui update dari x
-        temp.xmax = max(this-> xmax,yoi.xmax);
         temp.xmin = min(this-> xmin,yoi.xmin);
+        temp.xmax = max(this-> xmax,yoi.xmax);
         // Untuk mengetahui update dari y
-        temp.ymax = max(this-> ymax,yoi.ymax);
         temp.ymin = min(this-> ymin,yoi.ymin);
+        temp.ymax = max(this-> ymax,yoi.ymax);
 
-    }else cout << "Persegi Panjang 1 dam 2 Tidak Beririsan dan tidak dapat dilakukan pertambahan \n";
-
+    }else cout << "Persegi Panjang 1 dam 2 Tidak Beririsan, Persegi Panjang tidak bisa lanjut ke pertambahan";
         return temp;
 }
 
@@ -73,16 +74,18 @@ PersegiPanjang PersegiPanjang::operator-(PersegiPanjang const &yoi)
     if (*this == yoi)//Berfungsi penunjuk nilai dari variable persegi dan syarat yang dipenuhi (terdapat di line command no 26)
     {
         // Untuk mengetahui update dari x
-        temp.xmax = max(this-> xmax,yoi.xmax);
         temp.xmin = min(this-> xmin,yoi.xmin);
+        temp.xmax = max(this-> xmax,yoi.xmax);
         // Untuk mengetahui update dari y
-        temp.ymax = max(this-> ymax,yoi.ymax);
         temp.ymin = min(this-> ymin,yoi.ymin);
+        temp.ymax = max(this-> ymax,yoi.ymax);
 
-    }else cout << "Persegi Panjang 1 dam 2 Tidak Beririsan dan tidak dapat dilakukan pengurangan \n";
-      return temp;
+    }else cout << "Persegi Panjang 1 dan 2 Tidak Beririsan, Persegi Panjang tidak bisa lanjut ke pengurangan";
+        return temp;
 }
 
+void PersegiPanjang::operator -- (int){}
+void PersegiPanjang::operator ++ (int){} //Untuk mengambil salah satu properti kelas dari operator (--) dan (++)
 //Operator (++) berfungsi untuk mengubah luasan persegi panjang dengan mengkali 2x luasan awalnya (diperbesar)
 void PersegiPanjang::operator++()
 {
@@ -92,17 +95,17 @@ void PersegiPanjang::operator++()
     lbr = (this->ymin - this->ymax);
     pjg = abs(pjg);
     lbr = abs(lbr);
+  //Cara menentukkan titik-titik sumbu baru persegi tadi
+    this->xmin = Ttengah_x - (pjg/2);
+    this->xmax = Ttengah_x + (pjg/2);
+    this->ymin = Ttengah_y - (lbr/2);
+    this->ymax = Ttengah_y + (lbr/2);
   //Titik Tengah Yang dimasukkan dari Persegi panjang tadi
     Ttengah_x = pjg/2 + this->xmin;
     Ttengah_y = lbr/2 + this->ymin;
   //Lalu luasan persegi panjang menjadi 2 kali luasannya 
     pjg*=2;
     lbr*=2;
-  //Cara menentukkan titik-titik sumbu baru persegi tadi
-    this->xmax = Ttengah_x + pjg/2;
-    this->xmin = Ttengah_x - pjg/2;
-    this->ymax = Ttengah_y + lbr/2;
-    this->ymin = Ttengah_y - lbr/2;
 
 }
 
@@ -115,23 +118,19 @@ void PersegiPanjang::operator--()
     lbr = (this->ymin - this->ymax);
     pjg = abs(pjg);
     lbr = abs(lbr);
+  //Cara menentukkan titik-titik sumbu baru persegi tadi
+    this->xmin = Ttengah_x - (pjg/2);
+    this->xmax = Ttengah_x + (pjg/2);
+    this->ymin = Ttengah_y - (lbr/2);
+    this->ymax = Ttengah_y + (lbr/2);
   //Titik Tengah Yang dimasukkan dari Persegi panjang tadi
     Ttengah_x = pjg/2 + this->xmin;
     Ttengah_y = lbr/2 + this->ymin;
   //Lalu luasan persegi panjang menjadi setengah atau 0,5 kali luasannya 
     pjg/=2;
     lbr/=2;
-  //Cara menentukkan titik-titik sumbu baru persegi tadi
-    this->xmax = Ttengah_x + pjg/2;
-    this->xmin = Ttengah_x - pjg/2;
-    this->ymax = Ttengah_y + lbr/2;
-    this->ymin = Ttengah_y - lbr/2;
-
 }
 
-void PersegiPanjang::operator ++ (int){}
-void PersegiPanjang::operator -- (int){}
-//Mengambil nilai salah satu dari properti kelas tadi
 float PersegiPanjang::operator[](int huha)
 {
     switch(huha)
